@@ -1,0 +1,10 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: nfs-storage
+provisioner: kubernetes.io/nfs-subdir-external
+parameters:
+  # Reemplazar estos valores con la configuración de su servidor NFS
+  server: 192.168.122.1
+  path: /Daniel-Files/export/
+  readOnly: false  # Opcional: Establezca en true si el montaje debe ser de solo lectura
